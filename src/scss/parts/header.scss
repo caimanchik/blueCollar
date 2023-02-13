@@ -1,0 +1,149 @@
+.header {
+    &__opening {
+    }
+    &__contact {
+    }
+    &__links {
+    }
+}
+
+.opening-header {
+    background-color: #f2f2f2;
+    padding: 1.18rem 0;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        margin-right: 1.18rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__opening {
+    }
+    &__list {
+        display: flex;
+    }
+    &__link {
+        display: inline-block;
+    }
+}
+
+.header-contact {
+    padding: 2.35rem 0 4.12rem;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+    }
+    &__logo {
+    }
+    &__connect {
+    }
+}
+
+.header-connect {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        &:first-child {
+            margin-right: 3.83rem;
+        }
+    }
+}
+
+.header-connect-item {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        .header-connect-item__icon {
+            background-color: darken($yellow, 10%);
+        }
+    }
+
+    &__icon {
+        height: 4rem;
+        width: 4rem;
+        position: relative;
+        background-color: $yellow;
+        border-radius: 50%;
+        margin-right: 0.88rem;
+        transition: all ease 0.3s;
+
+        & img {
+            position: absolute;
+            object-fit: contain;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        font-family: $mulish;
+        font-size: 1.18rem;
+    }
+    &__link {
+        color: $grey;
+        margin-top: 0.5rem;
+    }
+}
+
+.header-links {
+    position: fixed;
+    left: 50%;
+    top: 197px;
+    width: 100%;
+    
+    transform: translateX(-50%);
+    white-space: nowrap;
+    
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $yellow;
+        padding: 0.59rem 0.59rem 0.59rem 2.65rem;
+    }
+    &__item {
+    }
+    &__links {
+        display: flex;
+    }
+    &__link {
+        margin-right: 2.94rem;
+        font-size: 1.177rem;
+        line-height: 1.5em;
+        transition: all ease .3s;
+        
+        &:hover {
+            color: #fff;
+        }
+    }
+    &__button {
+        padding: 1.12rem 2.47rem;
+        background-color: $blue;
+        color: #f4f4f4;
+        transition: all ease 0.3s;
+        font-size: 1.17rem;
+        line-height: 1.5em;
+
+        &:hover {
+            // color: $blue;
+            background: lighten($blue, 10%);
+        }
+    }
+}

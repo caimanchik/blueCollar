@@ -1,5 +1,7 @@
 //* import shrifts and parts
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Mulish&display=swap');
+
 @import "parts/nullstyle.scss";
 @import "parts/vars.scss";
 @import 'parts/helpers.scss';
@@ -31,7 +33,7 @@ body{
 	font-family: $fontfamily;
 	color: $color;
     background-color: $bgcolor;
-	letter-spacing: 0.257rem;
+	letter-spacing: 0.0212rem;
 	
 	&.lock{
 		overflow: hidden;
@@ -45,4 +47,4 @@ body{
 
 //* parts of scss
 
-
+@import 'parts/header.scss';

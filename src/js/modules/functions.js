@@ -12,3 +12,18 @@ export function isWebp() {
         document.documentElement.classList.add(className)
     });
 }
+
+export function header() {
+    
+    let links = document.querySelector('.header-links');
+    
+    let top = links.getBoundingClientRect().top
+    
+    document.addEventListener('scroll', e => {
+        if (document.documentElement.scrollTop < top) {
+            links.style.top = `${top - document.documentElement.scrollTop}px`
+        } else
+            links.style.top = "0px"
+    })
+    
+}

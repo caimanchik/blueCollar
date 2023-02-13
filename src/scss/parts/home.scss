@@ -1,0 +1,61 @@
+.home {
+    position: relative;
+    padding: 15.88rem 0 13.53rem;
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+    &__body {
+        
+        position: relative;
+        z-index: 1;
+        color: #fff;
+    }
+    &__improve {
+        background-color: rgba(#fff, 0.2);
+        display: inline-block;
+        text-transform: capitalize;
+        font-size: 1.06rem;
+        line-height: 1.5em;
+        padding: 0 2.35rem 0 3.53rem;
+        position: relative;
+        
+        & img {
+            position: absolute;
+            width: 1.76rem;
+            height: 1.76rem;
+            left: 20px;
+            top: 0;
+            object-fit: contain;
+        }
+    }
+    &__title {
+        margin-top: 1.82rem;
+        font-family: $mulish;
+        font-size: 3.53rem;
+        line-height: 1.3em;
+        width: 41.88rem;
+        text-transform: capitalize;
+    }
+    &__button {
+        margin-top: 1.76rem;
+        font-size: 1.2rem;
+        padding: 1.2rem 2.47rem;
+        background-color: $yellow;
+        transition: all ease .3s;
+        
+        &:hover {
+            background-color: darken($yellow, 10%);
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.about {
+    padding: 8.24rem 0;
+    &__body {
+        display: flex;
+        margin: 0 -1.47rem;
+    }
+    &__column {
+        flex: 0 0 50%;
+        padding: 0 1.47rem;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        
+        & img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            left: 0;
+            top: 0;
+        }
+    }
+    &__content {
+    }
+}
+
+.about-content {
+    &__welcome {
+        font-size: 1.06rem;
+        line-height: 1.5em;
+        position: relative;
+        
+        & img {
+            position: absolute;
+            left: 18px;
+            top: 0;
+            width: 1.35rem;
+            height: 1.59rem;
+            object-fit: contain;
+        }
+        
+        & span {
+            padding: 0 1.177rem 0 3.06rem;
+            display: inline-block;
+            background-color: #F4F4F4;
+        }
+    }
+    &__title {
+        margin-top: 1.29rem;
+    }
+    &__text {
+        margin-top: 0.59rem;
+    }
+    &__experience {
+    }
+}
+
+.about-experience {
+    margin-top: 1.76rem;
+    display: flex;
+    align-items: center;
+    
+    &__experience {
+        flex: 0 0 38%;
+        background-color: #F4F4F4;
+    }
+    &__container {
+        padding: 1.47rem 2.35rem 2.35rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    &__year {
+        font-size: 4.7rem;
+        color: $yellow;
+        font-family: $mulish;
+    }
+    &__yeartext {
+        margin-top: 1rem;
+        font-size: 1.18rem;
+        line-height: 1.3em;
+    }
+    &__reasons {
+        flex: 0 0 62%;
+        padding-left: 2.35rem;
+    }
+    &__list {
+    }
+    &__item {
+        margin-top: 0.59rem;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

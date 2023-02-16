@@ -27,3 +27,20 @@ export function header() {
     })
     
 }
+
+export function burger() {
+    
+    let burger = document.querySelector('.header-burger');
+    let links = document.querySelector('.header-links__links');
+    
+    burger.addEventListener('click', e => {
+        if (burger.classList.contains('active')) {
+            burger.classList.remove('active')
+            links.classList.remove('active')
+        } else {
+            burger.classList.add('active')
+            links.classList.add('active')
+        }
+    })
+    
+}

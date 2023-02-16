@@ -41,8 +41,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: $md3) {
+            flex-direction: column;
+            align-items: start;
+        }
     }
     &__item {
+        &:last-child {
+            @media(max-width:$md3){
+                margin-top: 1rem;
+            }
+        }
     }
     &__logo {
     }
@@ -53,10 +63,25 @@
 .header-connect {
     display: flex;
     align-items: center;
+    
+    @media(max-width:$md4){
+        flex-direction: column;
+        align-items: start;
+    }
 
     &__item {
         &:first-child {
             margin-right: 3.83rem;
+            
+            @media(max-width:$md4){
+                margin-right: 0;
+            }
+        }
+        
+        &:last-child {
+            @media(max-width:$md4){
+                margin-top: 1rem;
+            }
         }
     }
 }
@@ -64,6 +89,7 @@
 .header-connect-item {
     display: flex;
     align-items: center;
+    white-space: nowrap;
 
     &:hover {
         .header-connect-item__icon {
@@ -108,10 +134,22 @@
     top: 197px;
     width: 100%;
     z-index: 2;
-    
+
     transform: translateX(-50%);
     white-space: nowrap;
+
+    @media (max-width: $md2) {
+        top: 180px;
+    }
     
+    @media(max-width:$md3){
+        top: 230px;
+    }
+    
+    @media(max-width:$md4){
+        top: 320px;
+    }
+
     &__row {
         display: flex;
         justify-content: space-between;
@@ -120,18 +158,50 @@
         padding: 0.59rem 0.59rem 0.59rem 2.65rem;
     }
     &__item {
+        position: relative;
     }
     &__links {
         display: flex;
+
+        @media (max-width: $md3) {
+            position: absolute;
+            top: 12px;
+            left: -2.65rem;
+            flex-direction: column;
+            background-color: $yellow;
+            padding: 1rem 2.65rem;
+            transition: all ease 0.3s;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        &.active {
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
     &__link {
         margin-right: 2.94rem;
         font-size: 1.177rem;
         line-height: 1.5em;
-        transition: all ease .3s;
-        
+        transition: all ease 0.3s;
+
         &:hover {
             color: #fff;
+        }
+
+        & a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: $md2) {
+            margin-right: 2rem;
+        }
+
+        @media (max-width: $md3) {
+            margin-right: 0;
         }
     }
     &__button {
@@ -143,8 +213,101 @@
         line-height: 1.5em;
 
         &:hover {
-            // color: $blue;
             background: lighten($blue, 10%);
+        }
+
+        @media (max-width: $md2) {
+            padding: 1rem 2rem;
+        }
+
+        @media (max-width: $md3) {
+            padding: 0.7rem 1.5rem;
+        }
+    }
+}
+
+.header-burger {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 18px;
+    height: 14px;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: $md3) {
+        display: block;
+    }
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    &__line {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $blue;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        transition: all 0.2s ease 0s;
+
+        &:nth-child(1) {
+            transition-delay: 0.2s;
+        }
+
+        &:nth-child(2) {
+            top: 6px;
+            transition-delay: 0s;
+        }
+        &:nth-child(3) {
+            top: 12px;
+            transition-delay: 0.2s;
+        }
+        &:nth-child(4) {
+            top: 50%;
+            opacity: 0;
+            transition-delay: 0s;
+        }
+        &:nth-child(5) {
+            top: 50%;
+            opacity: 0;
+            transition-delay: 0s;
+        }
+    }
+
+    &.active {
+        .header-burger__line {
+            &:nth-child(4) {
+                transform: rotate(45deg);
+                top: 5px;
+                left: -1px;
+                opacity: 1;
+                transition-delay: 0.2s;
+            }
+
+            &:nth-child(1),
+            &:nth-child(3),
+            &:nth-child(2) {
+                top: 50%;
+                opacity: 0;
+                transition-delay: 0s;
+            }
+
+            &:nth-child(2) {
+                transition-delay: 0.2s;
+            }
+
+            &:nth-child(5) {
+                transform: rotate(-45deg);
+                top: 5px;
+                left: -1px;
+                opacity: 1;
+                transition-delay: 0.2s;
+            }
         }
     }
 }

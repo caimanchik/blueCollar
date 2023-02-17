@@ -1,0 +1,210 @@
+.services {
+    position: relative;
+    padding-top: 8rem;
+    background-color: #f4f4f4;
+    
+    @media(max-width:$md3){
+        padding-top: 6rem;
+    }
+
+    &__yellow {
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 5.8rem);
+        background-color: $yellow;
+        z-index: 0;
+        top: 0;
+        left: 0;
+    }
+
+    &__body {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__start {
+        text-align: center;
+    }
+
+    &__offer {
+        & span {
+            background-color: #fff;
+        }
+    }
+
+    &__icon-text {
+        display: inline-block;
+    }
+
+    &__title {
+        margin-top: 1.3rem;
+    }
+
+    &__text {
+        color: $blue;
+        margin-top: 0.7rem;
+
+        & span {
+            display: inline-block;
+            max-width: 49rem;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        margin: -0.5rem -0.9rem;
+        margin-top: 2.35rem;
+        flex-wrap: wrap;
+    }
+    &__slides {
+    }
+    &__slide {
+    }
+}
+
+.services-buttons {
+    &__item {
+        padding: 0.5rem 0.9rem;
+    }
+
+    &__button {
+        padding: 1rem 2.35rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.18rem;
+        border: 1px solid $blue;
+        
+        @media(max-width:$md4){
+            padding: 1rem 1.8rem;
+        }
+        
+        @media(max-width:405px){
+            flex-direction: column;
+            width: 130px;
+            padding: 1rem 0;
+        }
+
+        & span {
+            display: inline-block;
+            margin-left: 0.6rem;
+            @media(max-width:405px) {
+                margin-left: 0;
+            }
+        }
+        transition: all ease 0.3s;
+
+        &:hover {
+            background-color: darken($yellow, 7%);
+        }
+
+        &.active {
+            background-color: #fff;
+            border-width: 0px;
+        }
+    }
+}
+
+.services-slide {
+    background-color: #fff;
+    margin-top: 2.35rem;
+    padding: 4rem 3.53rem;
+    box-shadow: -1px 6px 18px rgba(0, 0, 0, 0.09);
+    
+    @media(max-width:$md3){
+        padding: 2rem 2rem;
+    }
+
+    &__columns {
+        display: flex;
+        margin: 0 -2.2rem;
+        @media(max-width:$md3){
+            margin: 0;
+        }
+        
+        @media(max-width:580px){
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        padding: 0 2.2rem;
+        
+        @media(max-width:$md3){
+            padding: 0;
+        }
+        &:first-child {
+            display: flex;
+            flex-direction: column;
+            
+            @media(max-width:$md3){
+                padding-right: 1.5rem;
+            }
+        }
+        &:last-child {
+            flex: 0 0 40%;
+            padding-top: 0.59rem;
+            padding-bottom: 0.59rem;
+            
+            @media(max-width:$md3){
+                flex: 0 0 50%;
+            }
+            
+            @media(max-width:580px) {
+                padding: 0;
+                margin-top: 1rem;
+            }
+            
+            // @media(max-width:$md3){
+            //     padding: 1rem 70px;
+            // }
+            
+            // @media(max-width:$md4){
+            //     padding: 1rem 0;
+            // }
+        }
+    }
+    &__subtitle {
+        & span {
+            background-color: #f4f4f4;
+        }
+    }
+    &__title {
+        margin-top: 1.3rem;
+    }
+    &__text {
+        margin-top: 0.88rem;
+    }
+    
+    &__grow {
+        flex-grow: 1;
+    }
+    
+    &__button {
+        margin-top: 1.8rem;
+
+        padding: 1.24rem 2.48rem;
+        background-color: $yellow;
+        font-size: 1.18rem;
+        transition: all ease 0.3s;
+
+        &:hover {
+            background-color: $blue;
+            color: #fff;
+        }
+    }
+    &__image {
+        width: 100%;
+        padding-top: 88%;
+        position: relative;
+
+        & img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            left: 0;
+            top: 0;
+        }
+    }
+}

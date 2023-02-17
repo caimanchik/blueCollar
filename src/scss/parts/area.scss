@@ -1,0 +1,101 @@
+.area {
+    background-color: #f4f4f4;
+    &__body {
+        padding: 8rem 0 6rem;
+    }
+    &__header {
+        text-align: center;
+    }
+    &__subtitle-wrap {
+    }
+    &__subtitle {
+        display: inline-block;
+        background-color: #fff;
+    }
+    &__title {
+    }
+    
+    &__text-wrap {
+        
+    }
+    
+    &__text {
+        max-width: 48rem;
+        margin: 0 auto;
+        
+    }
+    &__columns {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem -0.88rem 0;
+        margin-top: 2.9rem;
+        
+        @media(max-width:$md3){
+            margin-top: 1.8rem;
+        }
+    }
+    &__column {
+        flex: 0 0 33.3333%;
+        padding: 0.88rem;
+        
+        @media(max-width:$md3){
+            flex: 0 0 50%;
+        }
+        
+        @media(max-width:$md4){
+            flex: 0 0 100%;
+            padding: 0.5rem 0.88rem;
+        }
+    }
+}
+
+.area-column {
+    &__body {
+        background-color: $blue;
+        padding: 2.9rem 2.6rem 2.9rem 2rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    &__image {
+    }
+    &__title {
+        color: $yellow;
+        margin-top: 1.177rem;
+        font-size: 1.47rem;
+        font-family: $mulish;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 1.2em;
+        
+        & a {
+            transition: all ease .3s;
+            &:hover {
+                color: darken($yellow, 20%);
+            }
+        }
+    }
+    &__text-wrap {
+        flex-grow: 1;
+    }
+    &__text {
+        // flex-grow: 1;
+        margin: auto;
+        
+        color: #D2D2D2;
+        font-size: 1rem;
+        margin-top: 0.88rem;
+        line-height: 1.5em;
+    }
+    
+    &__link {
+        margin-top: 1.3rem;
+        color: #fff;
+        font-size: 1.06rem;
+        transition: all ease .3s;
+        
+        &:hover {
+            color: darken($yellow, 10%);
+        }
+    }
+}

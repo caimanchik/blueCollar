@@ -215,7 +215,7 @@
         letter-spacing: 0.02rem;
         transition: all ease .3s;
         
-        &:hover {
+        &:hover, &:focus {
             background-color: darken($yellow, 5%);
         }
     }

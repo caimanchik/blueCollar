@@ -1,0 +1,222 @@
+.contact {
+    padding-top: 6rem;
+    &__body {
+    }
+    &__columns {
+        display: flex;
+        margin: -1.3rem;
+        
+        @media(max-width:$md3){
+            flex-wrap: wrap;
+        }
+    }
+    &__column {
+        flex: 0 0 50%;
+        padding: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        
+        @media(max-width:$md3){
+            flex: 0 0 100%;
+            padding: 1.5rem 4rem;
+            
+            &:first-child {
+                order: 2;
+            }
+        }
+        
+        @media(max-width:$md4){
+            padding: 1.5rem 1.35rem;
+        }
+    }
+}
+
+.contact-column {
+    &__texticon {
+        & span {
+            background-color: #f4f4f4;
+        }
+    }
+    &__title {
+        margin-top: 1.3rem;
+        margin-bottom: 2.35rem;
+    }
+    
+    &__grow {
+        flex-grow: 1;
+    }
+    
+    &__quote {
+    }
+    &__question {
+    }
+}
+
+.contact-quote {
+    border: 1px solid #dddddd;
+    padding: 2.35rem;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1.8rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 1px;
+            background-color: #dcdcdc;
+        }
+    }
+
+    &__header-column {
+        &:first-child {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__photo {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    &__author {
+        margin-left: 0.6rem;
+    }
+    &__name {
+        font-size: 1.3rem;
+        font-family: $mulish;
+    }
+    &__area {
+    }
+    &__content {
+    }
+    &__text {
+        margin-top: 1.18rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    &__img {
+        width: 55px;
+        height: 55px;
+        background-color: $yellow;
+        border-radius: 50%;
+        position: relative;
+
+        & img {
+            position: absolute;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.contact-question {
+    padding: 3.53rem 3.53rem 2.94rem 2.35rem;
+    background-color: $yellow;
+    
+    @media(max-width:$md4){
+        padding: 3.53rem 2.35rem 2.94rem 2rem;
+    }
+    
+    &__texticon {
+        & span {
+            background-color: #F4F4F4;
+        }
+    }
+    &__custom {
+        margin-top: 1.24rem;
+        font-size: 1.47rem;
+        color: $blue;
+        font-family: $mulish;
+    }
+    &__text {
+        margin-top: 0.8rem;
+        font-size: 1.06rem;
+        line-height: 1.3em;
+    }
+    &__call {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+    &__phoneicon {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        background-color: #fff;
+        position: relative;
+        
+        & img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__phone {
+        margin-left: 1.18rem;
+        font-size: 1.76rem;
+        color: #fff;
+        
+        @media(max-width:$md4){
+            margin-left: 0.8rem;
+            font-size: 1.4rem;
+        }
+    }
+    &__body {
+        flex-grow: 1;
+    }
+    &__form {
+    }
+}
+.contact-column-form {
+    padding: 3.82rem 2.35rem;
+    background-color: #f4f4f4;
+    height: 100%;
+    
+    &__field {
+        margin-top: 1.47rem;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    &__input {
+        width: 100%;
+        padding: 1.18rem 2.35rem;
+        border: 1px solid #CCCCCC;
+        transition: all ease .3s;
+        
+        &:focus, &:active {
+            border-color: darken(#CCCCCC, 30%);
+        }
+    }
+    
+    &__input-textarea {
+        resize: none;
+        height: 8rem;
+    }
+    
+    &__buttonwrap {
+        margin-top: 1.47rem;
+    }
+    &__button {
+        width: 100%;
+        height: 60px;
+        background-color: $yellow;
+        font-weight: 700;
+        letter-spacing: 0.02rem;
+        transition: all ease .3s;
+        
+        &:hover {
+            background-color: darken($yellow, 5%);
+        }
+    }
+}

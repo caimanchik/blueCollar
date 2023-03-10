@@ -1,0 +1,111 @@
+.projects {
+    background-color: $blue;
+    padding: 6rem 0;
+    &__body {
+    }
+    &__header {
+        text-align: center;
+    }
+    &__subtitlewrap {
+        & span {
+            display: inline-block;
+            background-color: #f4f4f4;
+        }
+    }
+    &__subtitle {
+    }
+    &__title {
+        color: #fff;
+        margin-top: 1.3rem;
+    }
+    &__scroll {
+    }
+
+    &__scroll-wrap {
+        margin: 3rem 0 0;
+    }
+}
+
+.projects-scroll {
+    display: flex;
+    gap: 1.76rem;
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: white darken($blue, 10%);
+
+    &::-webkit-scrollbar {
+        height: 4px;
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: darken($blue, 10%);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #fff;
+    }
+
+    &__item {
+        flex: 0 0 25%;
+        // padding: 0 0.88rem;
+
+        // &:first-child {
+        //     padding-left: 0;
+        // }
+
+        // &:last-child {
+        //     padding-right: 0;
+        // }
+
+        @media (max-width: $md2) {
+            flex: 0 0 40%;
+        }
+
+        @media (max-width: 650px) {
+            flex: 0 0 55%;
+        }
+
+        @media (max-width: $md4) {
+            flex: 0 0 85%;
+        }
+    }
+    &__body {
+        background-color: #fff;
+        padding: 1.18rem 1.18rem 1.5rem;
+    }
+    &__image {
+        width: 100%;
+        padding-bottom: 120%;
+        position: relative;
+        overflow: hidden;
+
+        & img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            left: 0;
+            top: 0;
+
+            transition: all ease 0.2s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    &__title {
+        text-align: center;
+        font-size: 1.47rem;
+        line-height: 1.5em;
+        text-transform: capitalize;
+        font-family: $mulish;
+        margin-top: 1.76rem;
+    }
+    &__subtitle {
+        text-align: center;
+        margin-top: 0.24rem;
+    }
+}

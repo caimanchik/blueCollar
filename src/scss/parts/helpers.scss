@@ -46,3 +46,16 @@
         padding: 0 15px;
     }
 }
+
+.container2 {
+    padding: 0 2rem;
+    
+    @media(max-width:$md3){
+        padding: 0 1.5rem;
+    }
+}
+
+.blue {
+    color: $blue;
+}
+

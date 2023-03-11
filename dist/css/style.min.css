@@ -1637,3 +1637,127 @@ body.lock {
 .price-footer__text {
   margin-top: 0.6rem;
 }
+
+.news {
+  padding: 6rem 0;
+}
+.news__header {
+  text-align: center;
+}
+.news__texticon {
+  display: inline-block;
+  background: #f4f4f4;
+}
+.news__title {
+  margin-top: 1.3rem;
+}
+.news__body {
+  margin-top: 2.35rem;
+}
+.news__articles {
+  display: flex;
+  margin: -0.88rem;
+}
+@media (max-width: 680px) {
+  .news__articles {
+    flex-wrap: wrap;
+  }
+}
+.news__article {
+  flex: 0 0 50%;
+  padding: 0.88rem;
+}
+@media (max-width: 680px) {
+  .news__article {
+    flex: 0 0 100%;
+  }
+}
+
+.news-article__image-wrap {
+  padding-top: 63%;
+  position: relative;
+}
+.news-article__image-wrap img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+}
+.news-article__about {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 63%;
+}
+@media (max-width: 992.98px) {
+  .news-article__about {
+    width: 80%;
+  }
+}
+@media (max-width: 680px) {
+  .news-article__about {
+    width: 63%;
+  }
+}
+@media (max-width: 479.98px) {
+  .news-article__about {
+    width: 80%;
+  }
+}
+.news-article__content {
+  margin-top: 2.9rem;
+}
+.news-article__title {
+  font-size: 1.8rem;
+  line-height: 1.4em;
+  font-family: "Mulish", sans-serif;
+}
+.news-article__text {
+  margin-top: 1rem;
+}
+.news-article__link {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+.news-article__link img {
+  margin-left: 0.7rem;
+  transition: all ease 0.3s;
+}
+.news-article__link img:hover {
+  margin-left: 0.5rem;
+}
+.news-article__href {
+  display: inline-block;
+  font-size: 1.18rem;
+}
+.news-article__href:hover + img {
+  margin-left: 0.5rem;
+}
+
+.news-article-about {
+  display: flex;
+  height: 3.65rem;
+}
+.news-article-about__item {
+  background-color: #FFB342;
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news-article-about__item:first-child {
+  background-color: #FFC368;
+}
+.news-article-about__icon {
+  position: relative;
+  width: 1.06rem;
+  height: 1.06rem;
+}
+.news-article-about__text {
+  margin-left: 0.6rem;
+  font-size: 0.88rem;
+}

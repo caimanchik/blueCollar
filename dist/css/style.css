@@ -1915,12 +1915,16 @@ body.lock {
 .footer-item__body {
   display: flex;
 }
+.footer-item__body:hover .footer-item__icon {
+  background-color: #ff9e0f;
+}
 .footer-item__icon {
   height: 3.5rem;
   width: 3.5rem;
   border-radius: 50%;
   background-color: #FFB342;
   position: relative;
+  transition: all ease 0.3s;
 }
 .footer-item__icon img {
   position: absolute;
